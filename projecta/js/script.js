@@ -13,7 +13,7 @@ let xSpeed = [];
 let ySpeed = [];
 let diam = [];
 
-//random specks background
+//specks background
 var specks = {                     
   x: 0,
   y: 0,
@@ -23,9 +23,10 @@ function setup() {
   createCanvas(600, 600);
   angleMode(DEGREES);
   arraySetup();
-//dots for wavy backrgound
+//backrgound
   for(let i = 0; i < num; i++){
     dots.push(createVector(random(width), random(height)));
+    //creation of the particles in the breakground
   }
 }
 
@@ -33,7 +34,8 @@ function draw() {
     background(0,30);
     creature();
   
-//curving motion in the background
+//motion in the background
+//source for flow fields: Barney Codes https://youtu.be/sZBfLgfsvSk?feature=shared 
   for(let i = 0; i < num; i++){
     let d = dots[i];
     point(d.x, d.y);
@@ -49,14 +51,14 @@ function draw() {
   if(mouseIsPressed){
     noiseSeed(millis());
   }
-//end of dots for wavy backgroud
+//end of backgroud
   
-//specks flashes in the background
+//specks in the background
   specks.x = random(0,height);
   specks.y = random(0, height);
   fill(0,0,255);
   size = random(5,50);
-  stroke(255,70); //changes the appearance of the waves
+  stroke(255,70); //changes the appearance
   strokeWeight(3.5) 
   ellipse(specks.x, specks.y, size,size);
   //end of code for background
