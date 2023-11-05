@@ -1,7 +1,22 @@
-html, body {
-  margin: 0;
-  padding: 0;
+h1{
+  color: blue; 
+  background-color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 80px;
+  text-align: center;
+  font-weight: bold;
 }
-canvas {
-  display: block;
+
+body{
+  background-color: black;
+}
+
+p{
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+p {
+  margin: 50px 250px;
 }
