@@ -10,7 +10,9 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-
+body{
+    background-image: url(color\ wheel.webp);
+}
 #box1{
     border-style: ridge;
     border-width: 10px;
@@ -86,17 +88,14 @@
 
 #description{
     width: 90%;
-    font-size: 15px;
+    font-size: 20px;
     font-family:monospace;
     line-height: 25px;
-    padding-left: 50px;
-    margin-top: 20px;
+    margin-left: 500px;
+    width:500px;
     text-align: left;
+    line-height:1.5;
+
 }
 
-#links {
-    text-decoration:solid;
-    text-align: left;
-    bottom: 50px;
-}
 
