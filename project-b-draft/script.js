@@ -14,10 +14,10 @@ let posy4 = [];
 function setup() {
   createCanvas(700, 700);
   questions = new Questions([
-    "Rate the statement on a scale of 1 (strongly disagree) to 10 (strongly agree): I dislike being in social settings.",
-    "Rate the statement on a scale of   1 (strongly disagree) to 10 (strongly agree): I like to work by myself than with others.",
-    "Rate the statement on a scale of   1 (strongly disagree) to 10 (strongly agree): I can go to a restaurant and eat alone.",
-    "Rate the statement on a scale of   1 (strongly disagree) to 10 (strongly agree): It is difficult for me to make friends.",
+    "I dislike being in social settings.",
+    "I like to work by myself than with others.",
+    "I can go to a restaurant and eat alone.",
+    "It is difficult for me to make friends.",
   ]);
   for ( let i = 0; i < num; i++ ) {
     posx1[i] = width/3;
@@ -49,6 +49,7 @@ class Questions {
     
     //reference for input and button from p5
     //https://p5js.org/examples/dom-input-and-button.html 
+
     this.input = createInput();
     this.input.position(220, 600);
 
@@ -64,10 +65,10 @@ class Questions {
   displayQuestion() {
     background(0, 100);
     textWrap(WORD);
-    text(this.question[this.currentQuestion], 180, 400, 350);
+    text(this.question[this.currentQuestion], 180, 250, width/2);
     textFont('times new roman');
     fill(255);
-    textSize(20);
+    textSize(25);
 
     this.input.show();
     this.submitButton.show();
@@ -120,7 +121,7 @@ class Questions {
     posx4[num - 1] += random(-range, range);
     posy4[num - 1] += random(-range, range);
   
-    //contraining the number between values
+    //contraining number
     //referencehttps://p5js.org/reference/#/p5/constrain
     posx1[num - 1] = constrain(posx1[num - 1], 0, width);
     posy1[num - 1] = constrain(posy1[num - 1], 0, height);
