@@ -20,7 +20,9 @@ let song;
 
 //adding sound
 function preload() {
-  song = loadSound("assets/daylight-14872.mp3");
+  
+  song = loadSound("daylight-14872.mp3");
+  console.log(song);
 }
 
 function setup() {
@@ -81,10 +83,10 @@ class Questions {
     //reference for input and button from p5
     //https://p5js.org/examples/dom-input-and-button.html
     this.input = createInput();
-    this.input.position(220, 600);
+    this.input.position(600, 1050);
 
     this.submitButton = createButton("SUBMIT");
-    this.submitButton.position(380, 600);
+    this.submitButton.position(750, 1050);
     this.submitButton.mousePressed(() => this.checkInput());
 
     this.errorMessage = "";
