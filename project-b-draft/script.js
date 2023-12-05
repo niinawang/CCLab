@@ -86,7 +86,7 @@ class Questions {
     this.input.position(650, 1050);
 
     this.submitButton = createButton("SUBMIT");
-    this.submitButton.position(800, 1050);
+    this.submitButton.position(820, 1050);
     this.submitButton.mousePressed(() => this.checkInput());
 
     this.errorMessage = "";
