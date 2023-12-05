@@ -83,10 +83,10 @@ class Questions {
     //reference for input and button from p5
     //https://p5js.org/examples/dom-input-and-button.html
     this.input = createInput();
-    this.input.position(600, 1050);
+    this.input.position(650, 1050);
 
     this.submitButton = createButton("SUBMIT");
-    this.submitButton.position(750, 1050);
+    this.submitButton.position(800, 1050);
     this.submitButton.mousePressed(() => this.checkInput());
 
     this.errorMessage = "";
